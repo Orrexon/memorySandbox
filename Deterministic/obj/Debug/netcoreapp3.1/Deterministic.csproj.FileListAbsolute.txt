@@ -1,0 +1,11 @@
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\bin\Debug\netcoreapp3.1\Deterministic.exe
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\bin\Debug\netcoreapp3.1\Deterministic.deps.json
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\bin\Debug\netcoreapp3.1\Deterministic.runtimeconfig.json
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\bin\Debug\netcoreapp3.1\Deterministic.runtimeconfig.dev.json
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\bin\Debug\netcoreapp3.1\Deterministic.dll
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\bin\Debug\netcoreapp3.1\Deterministic.pdb
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\obj\Debug\netcoreapp3.1\Deterministic.csprojAssemblyReference.cache
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\obj\Debug\netcoreapp3.1\Deterministic.AssemblyInfoInputs.cache
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\obj\Debug\netcoreapp3.1\Deterministic.AssemblyInfo.cs
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\obj\Debug\netcoreapp3.1\Deterministic.dll
+C:\Users\Oscar\source\repos\Deterministic\Deterministic\obj\Debug\netcoreapp3.1\Deterministic.pdb
