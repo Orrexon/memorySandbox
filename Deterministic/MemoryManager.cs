@@ -5,14 +5,14 @@ using System.Text;
 
 namespace Deterministic
 {
-    public unsafe class MemoryManager<T> where T : unmanaged
+    public unsafe class MemoryManager
     {
         private const int HEAP_ZERO_MEMORY = 0x00000008;
         public IntPtr heapPointer;
         void*[] pointers = new void*[1];
         int listSize = 0;
 
-        internal static void AccessMemory(int memoryAddress)
+        internal void AccessMemory(int memoryAddress)
         {
             int index = GetListIndexFromMemAddr(memoryAddress);
             if (!(index > -1))
@@ -24,16 +24,14 @@ namespace Deterministic
         }
 
 
-        public static int Heap(int size)
+        public int Heap(int size)
         {
             void* result = HeapAlloc(heapPointer, HEAP_ZERO_MEMORY, (UIntPtr)size);
             if (result == null) throw new OutOfMemoryException();
             pointers[listSize++] = result;
-            DataPtr = (Data<int>*)result;
-            MemoryAddress = (int)result;
             return (int)result;
         }
-        public static int FreeHeap(int memoryAddr)
+        public int FreeHeap(int memoryAddr)
         {
             int index = -1;
             index = GetListIndexFromMemAddr(memoryAddr);
@@ -52,7 +50,7 @@ namespace Deterministic
                 throw new InvalidOperationException();
             }
         }
-        public static int GetListIndexFromMemAddr(int mem)
+        public int GetListIndexFromMemAddr(int mem)
         {
             for (int i = 0; i < listSize; i++)
             {

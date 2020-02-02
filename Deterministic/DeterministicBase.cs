@@ -10,10 +10,6 @@ namespace Deterministic
     {
         public int MemoryAddress { get; private set; }
         
-        public struct Data<T> where T:unmanaged
-        {
-            public T test;
-        }
         public Data<int>* DataPtr;
 
         public DeterministicBase()
