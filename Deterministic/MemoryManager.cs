@@ -12,24 +12,12 @@ namespace Deterministic
         void*[] pointers = new void*[1];
         int listSize = 0;
 
-        internal void AccessMemory(int memoryAddress)
-        {
-            int index = GetListIndexFromMemAddr(memoryAddress);
-            if (!(index > -1))
-            {
-                return;
-            }
-            Data<int>* p = (Data<int>*)pointers[index];
-            Console.WriteLine(p->test);
-        }
-
-
-        public int Heap(int size)
+        public void* Heap(int size)
         {
             void* result = HeapAlloc(heapPointer, HEAP_ZERO_MEMORY, (UIntPtr)size);
             if (result == null) throw new OutOfMemoryException();
             pointers[listSize++] = result;
-            return (int)result;
+            return result;
         }
         public int FreeHeap(int memoryAddr)
         {

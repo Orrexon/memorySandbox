@@ -17,7 +17,23 @@ namespace Deterministic
             MemoryAddress = 0;
             memMgr = new MemoryManager();
         }
-
+        public int NewPointer(int size)
+        {
+            DataPtr = (Data<int>*)memMgr.Heap(size);
+            return (int)DataPtr;
+        }
+        public void FreePointer()
+        {
+            memMgr.FreeHeap(MemoryAddress);
+        }
+        public Data<int> GetDataValue()
+        {
+            return *DataPtr;
+        }
+        public void SetDataValue(int value)
+        {
+            DataPtr->test = value;
+        }
         bool isDisposed = false;
         protected virtual void Dispose(bool disposing)
         {
