@@ -20,7 +20,7 @@ namespace Deterministic
         public int NewPointer(int size)
         {
             DataPtr = (Data<int>*)memMgr.Heap(size);
-            return (int)DataPtr;
+            return MemoryAddress = (int)DataPtr;
         }
         public void FreePointer()
         {

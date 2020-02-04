@@ -19,10 +19,13 @@ namespace Deterministic
             pointers[listSize++] = result;
             return result;
         }
+        public int FreeHeap(void* pointer)
+        {
+            return FreeHeap((int)pointer);
+        }
         public int FreeHeap(int memoryAddr)
         {
-            int index = -1;
-            index = GetListIndexFromMemAddr(memoryAddr);
+            int index = GetListIndexFromMemAddr(memoryAddr);
             if (!(index > -1))
             {
                 throw new Exception("Index not found, memory address does not exist");
